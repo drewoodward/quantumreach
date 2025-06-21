@@ -1,26 +1,28 @@
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import React from "react"
+import Image from 'next/image';
+import Navbar from '@/components/Navbar';
+
 export default function Home() {
   return (
-    <div> 
-      <DropdownMenu>
-        <DropdownMenuTrigger>Open</DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+    <>
+    <div className="relative h-screen flex flex-col">
+      <Image
+        src="/placeholder.svg"
+        alt="Background"
+        fill
+        style={{ objectFit: 'cover' }}
+        priority
+      />
+      <div className="relative z-10">
+        <Navbar />
+        {/* …rest of page */}
+      </div>
     </div>
+        <div className="relative h-screen flex flex-col bg-green-400">
+      <div className="relative z-10">
+        <Navbar />
+        {/* …rest of page */}
+      </div>
+    </div>
+    </>
   );
 }
