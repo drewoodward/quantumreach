@@ -1,0 +1,46 @@
+{
+    "accounts": [
+        {
+            "id": "1",
+            "name": "account_1",
+            "image": "account_image.jpg",
+            "views": 69,
+            "followers": 69
+        },
+        {
+            "id": "2",
+            "name": "account_2",
+            "image": "account_image.jpg",
+            "views": 690,
+            "followers": 609
+        },
+        {
+            "id": "3",
+            "name": "account_3",
+            "image": "account_image.jpg",
+            "views": 6900,
+            "followers": 6009
+        },
+        {
+            "id": "4",
+            "name": "account_4",
+            "image": "account_image.jpg",
+            "views": 690,
+            "followers": 6009
+        },
+        {
+            "id": "5",
+            "name": "account_5",
+            "image": "account_image.jpg",
+            "views": 609,
+            "followers": 6009
+        },
+        {
+            "id": "6",
+            "name": "account_6",
+            "image": "account_image.jpg",
+            "views": 69000,
+            "followers": 6900
+        }
+    ]
+}
