@@ -3,44 +3,51 @@
         {
             "id": "1",
             "name": "account_1",
-            "image": "account_image.jpg",
-            "views": 69,
+            "image": "ttLogo.svg",
+            "views": "15m",
             "followers": 69
         },
         {
             "id": "2",
             "name": "account_2",
-            "image": "account_image.jpg",
-            "views": 690,
+            "image": "ttLogo.svg",
+            "views": "9.5m",
             "followers": 609
         },
         {
             "id": "3",
-            "name": "account_3",
-            "image": "account_image.jpg",
-            "views": 6900,
-            "followers": 6009
+            "name": "@andrewcheek1",
+            "image": "ttLogo.svg",
+            "views": "11m",
+            "followers": 12000
         },
         {
             "id": "4",
-            "name": "account_4",
-            "image": "account_image.jpg",
-            "views": 690,
-            "followers": 6009
+            "name": "@jaimeprimedeals",
+            "image": "ttLogo.svg",
+            "views": "8.4m",
+            "followers": 30000
         },
         {
             "id": "5",
-            "name": "account_5",
-            "image": "account_image.jpg",
-            "views": 609,
-            "followers": 6009
+            "name": "ibecamethebest",
+            "image": "ttLogo.svg",
+            "views": "7.7m",
+            "followers": 9700
         },
         {
             "id": "6",
-            "name": "account_6",
-            "image": "account_image.jpg",
-            "views": 69000,
-            "followers": 6900
+            "name": "@moeshelpy",
+            "image": "ttLogo.svg",
+            "views": "3.3m",
+            "followers": 5500
+        },
+        {
+            "id": "6",
+            "name": "@nomorethrifting",
+            "image": "ttLogo.svg",
+            "views": "2.5m",
+            "followers": 6300
         }
     ]
 }

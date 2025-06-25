@@ -8,25 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import  ContactForm  from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 interface Accounts {
   name: string;
   image: string;
-  views: number;
+  views: string;
   followers: number;
   id: string;
 }
@@ -55,8 +44,8 @@ export default async function Home() {
           />
         </div>
 
-        {/* Mission statement */}
-        <p className="mt-6 text-center font-serif text-2xl italic text-gray-800">
+        {/* Mission statement (tighter to logo, spaced from cards) */}
+        <p className="mt-2 mb-10 text-center font-serif text-2xl italic text-gray-800">
           *mission statement*
         </p>
 
@@ -68,7 +57,12 @@ export default async function Home() {
               className="flex flex-col justify-between border border-gray-200 rounded-lg p-4"
             >
               <CardHeader className="flex-row gap-4 items-center">
-                {/* avatar could go here */}
+                <Avatar>
+                  <AvatarImage src={`/img/${account.image}`} alt="TikTok" />
+                  <AvatarFallback>
+                    {account.name.slice(0, 2)}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <CardTitle>{account.name}</CardTitle>
                   <CardDescription>{account.followers} followers.</CardDescription>
@@ -84,18 +78,16 @@ export default async function Home() {
           ))}
         </div>
 
-        {/* Contact prompt and textarea */}
-        <div className="mt-4 text-center">
-          Want to expand your reach? Contact us.
-        </div>
-        <div className="mt-8 mb-8 px-4">
-          <ContactForm />
-        </div>
       </div>
 
-      {/* Grey footer bar */}
-      <footer className="bg-gray-200 h-20 w-full flex items-center justify-center">
-        {/* You could add copyright or links here */}
+      {/* Grey footer bar with contact prompt and form */}
+      <footer className="bg-gray-200 w-full flex flex-col items-center py-8">
+        <div className="text-center font-serif mb-4">
+          Want to expand your reach? Contact us.
+        </div>
+        <div className="w-full max-w-md px-4">
+          <ContactForm />
+        </div>
       </footer>
     </main>
   );
