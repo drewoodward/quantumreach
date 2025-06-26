@@ -28,29 +28,30 @@ async function getAccounts(): Promise<Accounts[]> {
 export default async function Home() {
   const accounts = await getAccounts();
   return (
-    <main className="flex flex-col min-h-screen">
-      <div className="px-4 flex-grow">
-        <Navbar />
+    <main id="home" className="flex flex-col min-h-screen bg-[#D2B48C]">
+      {/* Full-width navbar */}
+      <Navbar />
 
-        {/* Logo container: centered only */}
-        <div className="flex justify-center mt-4">
+      <div className="px-4 flex-grow">
+        {/* Logo container: centered only, lowered below navbar */}
+        <div className="flex justify-center mt-28">
           <Image
             src="/qrmlogo.svg"
             alt="Quantum Reach Marketing Logo"
             width={450}
             height={350}
-            className="object-cover"
+            className="object-cover rounded-full"
             priority
           />
         </div>
 
         {/* Mission statement (tighter to logo, spaced from cards) */}
-        <p className="mt-2 mb-10 text-center font-serif text-2xl italic text-gray-800">
-          *mission statement*
+        <p className="mt-8 mb-10 text-center font-serif text-2xl italic text-gray-800 max-w-3xl mx-auto px-4">
+          "At Quantum Reach Marketing, we specialize in cutting-edge digital strategies with a focus on mastering the TikTok algorithm. Our mission is to help brands grow faster, reach wider, and connect deeper in the age of viral content and short-form video."
         </p>
 
         {/* Account cards section */}
-        <div className="grid grid-cols-2 gap-8 py-8">
+        <div id="accounts" className="grid grid-cols-2 gap-8 py-8 pb-25">
           {accounts.map((account) => (
             <Card
               key={account.id}
@@ -72,7 +73,7 @@ export default async function Home() {
                 <p>{account.views} monthly views.</p>
               </CardContent>
               <CardFooter>
-              <a
+                <a
                   href={`https://www.tiktok.com/@${account.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -90,7 +91,7 @@ export default async function Home() {
       </div>
 
       {/* Grey footer bar with contact prompt and form */}
-      <footer className="bg-gray-200 w-full flex flex-col items-center py-8">
+      <footer id="contact" className="bg-gray-200 w-full flex flex-col items-center py-8">
         <div className="text-center font-serif mb-4">
           Want to expand your reach? Contact us.
         </div>

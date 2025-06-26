@@ -10,21 +10,28 @@ import {
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"; // install with `npm install @radix-ui/react-icons`
 
 const Navbar: React.FC = () => (
-  <div className="bg-slate-700 p-4 shadow-lg flex justify-end">
+  // 📌 Fixed to top, full width, high z-index
+  <nav className="bg-slate-700 p-4 shadow-lg flex justify-end fixed top-0 w-full z-20">
     <DropdownMenu>
-      <DropdownMenuTrigger className="bg-green-400 p-2 rounded-xl hover:bg-green-500 transition">
+    <DropdownMenuTrigger className="bg-gray-700 p-2 rounded-xl hover:bg-black transition">
         <HamburgerMenuIcon className="w-6 h-6 text-white" aria-label="Menu" />
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+      {/* 📌 Added navigation links for one-page scrolling */}
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel>Navigate</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>Profile</DropdownMenuItem>
-        <DropdownMenuItem>Billing</DropdownMenuItem>
-        <DropdownMenuItem>Team</DropdownMenuItem>
-        <DropdownMenuItem>Subscription</DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#home">Home</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#accounts">Accounts</a>
+        </DropdownMenuItem>
+        <DropdownMenuItem asChild>
+          <a href="#contact">Contact</a>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  </div>
+  </nav>
 );
 
 export default Navbar;
