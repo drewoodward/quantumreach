@@ -72,7 +72,16 @@ export default async function Home() {
                 <p>{account.views} monthly views.</p>
               </CardContent>
               <CardFooter>
-                <Button variant="secondary">View Account</Button>
+              <a
+                  href={`https://www.tiktok.com/@${account.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button variant="secondary" className="w-full">
+                    View Account
+                  </Button>
+                </a>
               </CardFooter>
             </Card>
           ))}
