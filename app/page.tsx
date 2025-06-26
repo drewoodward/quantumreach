@@ -50,7 +50,7 @@ export default function Home() {
 
         {/* Mission statement: constrained width, responsive text, wraps on mobile */}
         <p className="mt-8 mb-10 text-center font-serif text-xl sm:text-2xl italic text-gray-800 max-w-2xl mx-auto px-4 break-words">
-          "At Quantum Reach Marketing, we specialize in cutting-edge digital strategies with a focus on mastering the TikTok algorithm. Our mission is to help brands grow faster, reach wider, and connect deeper in the age of viral content and short-form video."
+          &quot;At Quantum Reach Marketing, we specialize in cutting-edge digital strategies with a focus on mastering the TikTok algorithm. Our mission is to help brands grow faster, reach wider, and connect deeper in the age of viral content and short-form video.&quot;
         </p>
 
         {/* Account cards section: single column on mobile, two on larger screens, extra padding before footer */}
