@@ -11,6 +11,8 @@ import {
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import accountsData from '@/_data/db.json';
+
 
 interface Accounts {
   name: string;
@@ -20,9 +22,8 @@ interface Accounts {
   id: string;
 }
 
-async function getAccounts(): Promise<Accounts[]> {
-  const result = await fetch('http://localhost:4000/accounts');
-  return result.json();
+function getAccounts(): Accounts[] {
+  return accountsData;
 }
 
 export default async function Home() {

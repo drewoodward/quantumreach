@@ -1,5 +1,4 @@
-{
-    "accounts": [
+[
         {
             "id": "wornwildapparel",
             "name": "@wornwildapparel",
@@ -49,5 +48,4 @@
             "views": "2.5m",
             "followers": 6300
         }
-    ]
-}
+]
