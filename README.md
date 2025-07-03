@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quantum Reach Marketing Website
 
-## Getting Started
+A modern, responsive marketing site for Quantum Reach built with Next.js and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
+
+* **Responsive Design**: Mobile-first layouts and smooth breakpoints.
+* **Dynamic Content**: Loads account data from `/_data/db.json`.
+* **Optimized Images**: Built-in `next/image` for fast, responsive media.
+* **Custom Components**: Reusable UI elements (Navbar, Cards, Avatars, Contact Form).
+* **SEO & Performance**: Meta tags, code-splitting, and Vercel edge deployment.
+
+## 🛠️ Tech Stack
+
+* **Framework**: Next.js (React)
+* **Styling**: Tailwind CSS
+* **Deployment**: Vercel
+* **Data**: Local JSON (`/_data/db.json`)
+
+## 📥 Getting Started
+
+### Prerequisites
+
+* [Node.js](https://nodejs.org/) v16 or higher
+* npm or yarn
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repo
+git clone https://github.com/<your-org>/quantumreach.git
+cd quantumreach
+
+# Install dependencies
+npm install   # or `yarn install`
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run dev     # or `yarn dev`
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Build & Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build   # or `yarn build`
+npm start       # or `yarn start`
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+/ (root)
+├─ /components      # UI components (Navbar, Card, Avatar, ContactForm)
+├─ /pages           # Next.js pages (index.tsx, _app.tsx)
+├─ /public          # Static assets (images, fonts)
+└─ /_data/db.json   # Accounts data
+```
 
-## Deploy on Vercel
+## 🚢 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Push to `main` branch triggers automatic Vercel deployment. Configure any env vars in your Vercel dashboard if needed.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/YourFeature`)
+3. Commit your changes (`git commit -m "Add feature..."`)
+4. Push to branch (`git push origin feature/YourFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is not licensed but feel free to use and modify.
+
+---
